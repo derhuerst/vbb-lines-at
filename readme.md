@@ -18,7 +18,19 @@ npm install vbb-lines-at
 
 ## Usage
 
-todo
+```js
+require('vbb-lines-at')['9007103'] // U Voltastr.
+```
+
+will return
+
+```js
+[
+	{id: 315, name: '247', type: 'bus'},
+	{id: 393, name: 'N8',  type: 'bus'},
+	{id: 547, name: 'U8',  type: 'subway'}
+]
+```
 
 
 ## Contributing

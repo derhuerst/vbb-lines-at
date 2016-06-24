@@ -12,7 +12,7 @@
 	"license":     "ISC",
 	"engines":     {"node": ">=4"},
 	"devDependencies": {
-		"vbb-static": "^0.12"
+		"vbb-static": "^1"
 	},
 	"scripts": {
 		"build":      "node build.js",

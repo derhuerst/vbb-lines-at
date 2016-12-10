@@ -26,4 +26,10 @@ lines('all')
 			assert(line.type, 'line type does not exist or is empty')
 		}
 	}
+
+	assert.deepStrictEqual(linesAt['900000007103'], [
+		{id: '17363_700', name: '247', type: 'bus'},
+		{id: '17472_700', name: 'N8', type: 'bus'},
+		{id: '17525_400', name: 'U8', type: 'subway'}
+	])
 })

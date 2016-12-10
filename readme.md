@@ -1,6 +1,6 @@
 # vbb-lines-at
 
-**Which lines run at a station?** The data is computed from [open](http://daten.berlin.de/datensaetze/vbb-fahrplandaten-juni-2015-bis-dezember-2015) [GTFS](https://developers.google.com/transit/gtfs/) [data](https://github.com/derhuerst/vbb-gtfs).
+**Which lines run at a station?** The data is computed from [open](http://daten.berlin.de/datensaetze/vbb-fahrplandaten-dezember-2016-bis-august-2017) [GTFS](https://developers.google.com/transit/gtfs/) [data](https://github.com/derhuerst/vbb-gtfs).
 
 [![npm version](https://img.shields.io/npm/v/vbb-lines-at.svg)](https://www.npmjs.com/package/vbb-lines-at)
 [![build status](https://img.shields.io/travis/derhuerst/vbb-lines-at.svg)](https://travis-ci.org/derhuerst/vbb-lines-at)
@@ -20,16 +20,16 @@ npm install vbb-lines-at
 ## Usage
 
 ```js
-require('vbb-lines-at')['9007103'] // U Voltastr.
+require('vbb-lines-at')['900000007103'] // U Voltastr.
 ```
 
 will return
 
 ```js
 [
-	{id: 315, name: '247', type: 'bus'},
-	{id: 393, name: 'N8',  type: 'bus'},
-	{id: 547, name: 'U8',  type: 'subway'}
+	{id: 17363_700, name: '247', type: 'bus'},
+	{id: 17472_700, name: 'N8',  type: 'bus'},
+	{id: 17525_400, name: 'U8',  type: 'subway'}
 ]
 ```
 

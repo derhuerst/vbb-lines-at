@@ -12,10 +12,12 @@
 	"license":     "ISC",
 	"engines":     {"node": ">=4"},
 	"devDependencies": {
-		"vbb-static": "^1.2"
+		"stream-sink": "^2.0.0",
+		"vbb-lines": "^2.0.0",
+		"vbb-stations": "^3.0.0"
 	},
 	"scripts": {
-		"build":      "node build.js",
+		"build": "node convert.js",
 		"test":       "node test.js",
 		"prepublish": "npm run build; npm test"
 	}

@@ -33,3 +33,7 @@ lines('all')
 		{id: '17525_400', name: 'U8', type: 'subway'}
 	])
 })
+.catch((err) => {
+	console.error(err)
+	process.exit(1)
+})

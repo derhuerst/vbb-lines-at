@@ -1,7 +1,7 @@
 {
 	"name":        "vbb-lines-at",
 	"description": "Which lines run at a VBB station?",
-	"version":     "2.1.0",
+	"version":     "2.2.0",
 	"main":        "index.js",
 	"files":       ["index.js", "data.json", "data.md", "vbb-logo.jpg"],
 	"keywords":    ["vbb", "lines", "lines", "transfer"],
@@ -13,8 +13,8 @@
 	"engines":     {"node": ">=6"},
 	"devDependencies": {
 		"stream-sink": "^2.0.0",
-		"vbb-lines": "^2.1.0",
-		"vbb-stations": "^3.1.0"
+		"vbb-lines": "^2.2.0",
+		"vbb-stations": "^3.2.0"
 	},
 	"scripts": {
 		"build": "node convert.js",

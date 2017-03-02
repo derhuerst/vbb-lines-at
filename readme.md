@@ -23,13 +23,29 @@ npm install vbb-lines-at
 require('vbb-lines-at')['900000007103'] // U Voltastr.
 ```
 
-will return
+It will return `lines` in the [*Friendly Public Transport Format*](https://github.com/public-transport/friendly-public-transport-format).
 
 ```js
 [
-	{id: '17363_700', name: '247', type: 'bus'},
-	{id: '17472_700', name: 'N8',  type: 'bus'},
-	{id: '17525_400', name: 'U8',  type: 'subway'}
+	{
+		type: 'line',
+		id: '17363_700',
+		name: '247',
+		mode: 'bus',
+		product: 'bus'
+	}, {
+		type: 'line',
+		id: '17472_700',
+		name: 'N8',
+		mode: 'bus',
+		product: 'bus'
+	}, {
+		type: 'line',
+		id: '17525_400',
+		name: 'U8',
+		mode: 'train',
+		product: 'subway'
+	}
 ]
 ```
 

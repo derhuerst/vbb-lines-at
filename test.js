@@ -6,6 +6,28 @@ const assert  = require('assert')
 
 const linesAt = require('.')
 
+const linesAtVoltastr = [
+	{
+		type: 'line',
+		id: '17363_700',
+		name: '247',
+		mode: 'bus',
+		product: 'bus'
+	}, {
+		type: 'line',
+		id: '17472_700',
+		name: 'N8',
+		mode: 'bus',
+		product: 'bus'
+	}, {
+		type: 'line',
+		id: '17525_400',
+		name: 'U8',
+		mode: 'train',
+		product: 'subway'
+	}
+]
+
 
 
 lines('all')
@@ -27,11 +49,7 @@ lines('all')
 		}
 	}
 
-	assert.deepStrictEqual(linesAt['900000007103'], [
-		{id: '17363_700', name: '247', type: 'bus'},
-		{id: '17472_700', name: 'N8', type: 'bus'},
-		{id: '17525_400', name: 'U8', type: 'subway'}
-	])
+	assert.deepStrictEqual(linesAt['900000007103'], linesAtVoltastr)
 })
 .catch((err) => {
 	console.error(err)

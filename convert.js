@@ -5,6 +5,7 @@ const path = require('path')
 const sink = require('stream-sink')
 const stops = require('vbb-stations/full.json')
 const lines = require('vbb-lines')
+const pick = require('lodash.pick')
 
 // link stops to stations
 for (let stationId in stops) {
@@ -27,10 +28,12 @@ const computeLinesAt = (lines) => {
 				}
 				if (!linesAt[station.id]) linesAt[station.id] = []
 
-				if (!linesAt[station.id].some((l) => l.id === line.id))
-					linesAt[station.id].push({
-						id: line.id, name: line.name, type: line.type
-					})
+				if (!linesAt[station.id].some((l) => l.id === line.id)) {
+					const lineAt = Object.assign(pick(line, [
+						'type', 'id', 'name', 'mode', 'product'
+					]))
+					linesAt[station.id].push(lineAt)
+				}
 			}
 		}
 	}

@@ -13,7 +13,7 @@
 	"engines":     {"node": ">=6"},
 	"devDependencies": {
 		"stream-sink": "^2.0.0",
-		"vbb-lines": "^2.2.0",
+		"vbb-lines": "^3.0.0",
 		"vbb-stations": "^3.2.0"
 	},
 	"scripts": {

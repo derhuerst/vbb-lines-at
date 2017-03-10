@@ -14,8 +14,8 @@
 	"devDependencies": {
 		"lodash.pick": "^4.4.0",
 		"stream-sink": "^2.0.0",
-		"vbb-lines": "^2.2.0",
-		"vbb-stations": "^3.2.0"
+		"vbb-lines": "^3.0.0",
+		"vbb-stations": "^4.0.0"
 	},
 	"scripts": {
 		"build": "node convert.js",

@@ -14,7 +14,11 @@
 	"devDependencies": {
 		"lodash.pick": "^4.4.0",
 		"stream-sink": "^2.0.0",
+		"through2": "^2.0.3",
 		"vbb-lines": "^3.1.0",
+		"vbb-parse-line": "^0.2.2",
+		"vbb-mode-weights": "^0.2.0",
+		"vbb-trips": "^2.2.0",
 		"vbb-stations": "^5.1.0"
 	},
 	"scripts": {

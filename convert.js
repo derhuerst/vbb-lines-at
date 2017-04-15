@@ -2,10 +2,14 @@
 
 const fs = require('fs')
 const path = require('path')
-const sink = require('stream-sink')
 const stops = require('vbb-stations/full.json')
 const lines = require('vbb-lines')
+const weights = require('vbb-mode-weights')
+const parse = require('vbb-parse-line')
 const pick = require('lodash.pick')
+const sink = require('stream-sink')
+const trips = require('vbb-trips')
+const through = require('through2')
 
 // link stops to stations
 for (let stationId in stops) {
@@ -16,28 +20,41 @@ for (let stationId in stops) {
 
 
 
-const computeLinesAt = (lines) => {
-	const linesAt = {}
-	for (let line of lines) {
-		for (let variant of line.variants) {
-			for (let stopId of variant) {
-				const station = stops[stopId]
-				if (!station) {
-					console.error('Unknown stop', stopId)
-					continue
-				}
-				if (!linesAt[station.id]) linesAt[station.id] = []
+const computeLinesAt = (linesAt, lines) => (schedule, _, cb) => {
+	const line = lines.find((line) => line.id === schedule.route.line)
+	if (!line) {
+		console.error(`line ${schedule.route.line} of schedule ${schedule.id} does not exist`)
+		cb()
+		return
+	}
 
-				if (!linesAt[station.id].some((l) => l.id === line.id)) {
-					const lineAt = Object.assign(pick(line, [
-						'type', 'id', 'name', 'mode', 'product'
-					]))
-					linesAt[station.id].push(lineAt)
-				}
+	let base = weights[line.product] || .2
+	const parsed = parse(line.name)
+	if (parsed.type === 'bus' && (parsed.express || parsed.express)) base += .05
+
+	let weight = 0
+	for (let variant of line.variants) {
+		// todo: number of trips
+		weight += base * variant.length
+	}
+
+	for (let variant of line.variants) {
+		for (let stopId of variant) {
+			const station = stops[stopId]
+			if (!station) {
+				console.error('Unknown stop', stopId)
+				continue
+			}
+			if (!linesAt[station.id]) linesAt[station.id] = []
+
+			if (!linesAt[station.id].some((l) => l.id === line.id)) {
+				const lineAt = Object.assign({weight}, line)
+				linesAt[station.id].push(lineAt)
 			}
 		}
 	}
-	return linesAt
+
+	cb()
 }
 
 
@@ -51,8 +68,24 @@ const writeJSON = (data, file) => new Promise((yay, nay) => {
 
 lines('all')
 .pipe(sink('object'))
-.then(computeLinesAt)
-.then((linesAt) => writeJSON(linesAt, 'data.json'))
+.then((lines) => new Promise((yay, nay) => {
+	const linesAt = {}
+
+	trips.schedules()
+	.pipe(through.obj(computeLinesAt(linesAt, lines)))
+
+	.on('data', () => {})
+	.once('end', () => yay(linesAt))
+	.once('error', (err) => nay(err))
+}))
+.then((linesAt) => {
+	for (let station in linesAt) {
+		linesAt[station] = linesAt[station]
+		.sort((a, b) => b.weight - a.weight)
+		.map((line) => pick(line, ['type', 'id', 'name', 'mode', 'product']))
+	}
+	return writeJSON(linesAt, 'data.json')
+})
 .catch((err) => {
 	console.error(err)
 	process.exit(1)

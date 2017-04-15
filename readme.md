@@ -29,10 +29,10 @@ It will return `lines` in the [*Friendly Public Transport Format*](https://githu
 [
 	{
 		type: 'line',
-		id: '17363_700',
-		name: '247',
-		mode: 'bus',
-		product: 'bus'
+		id: '17525_400',
+		name: 'U8',
+		mode: 'train',
+		product: 'subway'
 	}, {
 		type: 'line',
 		id: '17472_700',
@@ -41,10 +41,10 @@ It will return `lines` in the [*Friendly Public Transport Format*](https://githu
 		product: 'bus'
 	}, {
 		type: 'line',
-		id: '17525_400',
-		name: 'U8',
-		mode: 'train',
-		product: 'subway'
+		id: '17363_700',
+		name: '247',
+		mode: 'bus',
+		product: 'bus'
 	}
 ]
 ```

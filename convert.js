@@ -81,8 +81,8 @@ lines('all')
 .then((linesAt) => {
 	for (let station in linesAt) {
 		linesAt[station] = linesAt[station]
-		.sort((a, b) => a.weight - b.weight)
-		.map((line) => pick(line, ['type', 'id', 'name', 'mode', 'product', 'weight']))
+		.sort((a, b) => b.weight - a.weight)
+		.map((line) => pick(line, ['type', 'id', 'name', 'mode', 'product']))
 	}
 	return writeJSON(linesAt, 'data.json')
 })

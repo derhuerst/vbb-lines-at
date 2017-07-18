@@ -9,16 +9,16 @@ const linesAt = require('.')
 const linesAtVoltastr = [
 	{
 		type: 'line',
-		id: '17472_700',
-		name: 'N8',
-		mode: 'bus',
-		product: 'bus'
-	}, {
-		type: 'line',
 		id: '17525_400',
 		name: 'U8',
 		mode: 'train',
 		product: 'subway'
+	}, {
+		type: 'line',
+		id: '17472_700',
+		name: 'N8',
+		mode: 'bus',
+		product: 'bus'
 	}, {
 		type: 'line',
 		id: '17363_700',

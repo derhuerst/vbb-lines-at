@@ -1,16 +1,28 @@
 {
-	"name":        "vbb-lines-at",
+	"name": "vbb-lines-at",
 	"description": "Which lines run at a VBB station?",
-	"version": "3.9.0",
-	"main":        "index.js",
-	"files":       ["index.js", "data.json", "data.md", "vbb-logo.jpg"],
-	"keywords":    ["vbb", "lines", "lines", "transfer"],
-	"author":      "Jannis R <mail@jannisr.de>",
-	"homepage":    "https://github.com/derhuerst/vbb-lines-at",
-	"repository":  "derhuerst/vbb-lines-at",
-	"bugs":        "https://github.com/derhuerst/vbb-lines/issues-at",
-	"license":     "ISC",
-	"engines":     {"node": ">=6"},
+	"version": "3.10.0",
+	"main": "index.js",
+	"files": [
+		"index.js",
+		"data.json",
+		"data.md",
+		"vbb-logo.jpg"
+	],
+	"keywords": [
+		"vbb",
+		"lines",
+		"lines",
+		"transfer"
+	],
+	"author": "Jannis R <mail@jannisr.de>",
+	"homepage": "https://github.com/derhuerst/vbb-lines-at",
+	"repository": "derhuerst/vbb-lines-at",
+	"bugs": "https://github.com/derhuerst/vbb-lines/issues-at",
+	"license": "ISC",
+	"engines": {
+		"node": ">=6"
+	},
 	"devDependencies": {
 		"lodash.pick": "^4.4.0",
 		"stream-sink": "^2.0.0",

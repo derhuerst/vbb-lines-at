@@ -28,7 +28,7 @@
 		"stream-sink": "^2.0.0",
 		"through2": "^2.0.3",
 		"vbb-lines": "^3.3.0",
-		"vbb-parse-line": "^0.2.4",
+		"vbb-parse-line": "^0.3.0",
 		"vbb-mode-weights": "^0.2.0",
 		"vbb-trips": "^2.4.1",
 		"vbb-stations": "^6.0.0"

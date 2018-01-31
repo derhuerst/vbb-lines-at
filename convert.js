@@ -42,7 +42,7 @@ const computeLinesAt = (linesAt, lines) => (schedule, _, cb) => {
 		for (let stopId of variant) {
 			const station = stops[stopId]
 			if (!station) {
-				console.error('Unknown stop', stopId)
+				console.error('Unknown stop', stopId, 'of line', line.id)
 				continue
 			}
 			if (!linesAt[station.id]) linesAt[station.id] = []

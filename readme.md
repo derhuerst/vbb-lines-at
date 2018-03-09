@@ -8,6 +8,7 @@
 [![dev dependency status](https://img.shields.io/david/dev/derhuerst/vbb-lines-at.svg)](https://david-dm.org/derhuerst/vbb-lines-at#info=devDependencies)
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/vbb-lines-at.svg)
 [![gitter channel](https://badges.gitter.im/derhuerst/vbb-rest.svg)](https://gitter.im/derhuerst/vbb-rest)
+[![support me on Patreon](https://img.shields.io/badge/support%20me-on%20patreon-fa7664.svg)](https://patreon.com/derhuerst)
 
 
 ## Installing

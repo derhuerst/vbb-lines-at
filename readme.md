@@ -1,6 +1,6 @@
 # vbb-lines-at
 
-**Which lines run at a station?** The data is computed from [open](https://daten.berlin.de/datensaetze/vbb-fahrplandaten-mai-2017-bis-dezember-2017) [GTFS](https://developers.google.com/transit/gtfs/) [data](https://vbb-gtfs.jannisr.de/).
+**Which lines run at a station?** The data is computed from [open](https://daten.berlin.de/datensaetze/vbb-fahrplandaten-mitte-april-2018-bis-mitte-dezember-2018) [GTFS](https://developers.google.com/transit/gtfs/) [data](https://vbb-gtfs.jannisr.de/).
 
 [![npm version](https://img.shields.io/npm/v/vbb-lines-at.svg)](https://www.npmjs.com/package/vbb-lines-at)
 [![build status](https://img.shields.io/travis/derhuerst/vbb-lines-at.svg)](https://travis-ci.org/derhuerst/vbb-lines-at)

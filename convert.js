@@ -35,11 +35,11 @@ const computeLinesAt = (linesAt, lines) => (schedule, _, cb) => {
 	let weight = 0
 	for (let variant of line.variants) {
 		// todo: number of trips
-		weight += base * variant.length
+		weight += base * variant.stops.length
 	}
 
 	for (let variant of line.variants) {
-		for (let stopId of variant) {
+		for (let stopId of variant.stops) {
 			const station = stops[stopId]
 			if (!station) {
 				console.error('Unknown stop', stopId, 'of line', line.id)

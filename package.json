@@ -27,7 +27,7 @@
 		"lodash.pick": "^4.4.0",
 		"stream-sink": "^2.0.0",
 		"through2": "^3.0.0",
-		"vbb-lines": "^4.1.0",
+		"vbb-lines": "^4.10.0",
 		"vbb-mode-weights": "^0.2.0",
 		"vbb-parse-line": "^1.0.0",
 		"vbb-stations": "^7.1.0",

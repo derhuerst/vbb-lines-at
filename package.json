@@ -1,7 +1,7 @@
 {
 	"name": "vbb-lines-at",
 	"description": "Which lines run at a VBB station?",
-	"version": "4.2.0",
+	"version": "4.2.1",
 	"main": "index.js",
 	"files": [
 		"index.js",

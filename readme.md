@@ -3,7 +3,6 @@
 **Which lines run at a station?** The data is computed from [open](https://daten.berlin.de/datensaetze/vbb-fahrplandaten-gtfs) [GTFS](https://developers.google.com/transit/gtfs/) [data](https://vbb-gtfs.jannisr.de/).
 
 [![npm version](https://img.shields.io/npm/v/vbb-lines-at.svg)](https://www.npmjs.com/package/vbb-lines-at)
-[![build status](https://img.shields.io/travis/derhuerst/vbb-lines-at.svg)](https://travis-ci.org/derhuerst/vbb-lines-at)
 [![dependency status](https://img.shields.io/david/derhuerst/vbb-lines-at.svg)](https://david-dm.org/derhuerst/vbb-lines-at)
 [![dev dependency status](https://img.shields.io/david/dev/derhuerst/vbb-lines-at.svg)](https://david-dm.org/derhuerst/vbb-lines-at#info=devDependencies)
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/vbb-lines-at.svg)

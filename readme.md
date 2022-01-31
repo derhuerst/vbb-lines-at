@@ -3,11 +3,9 @@
 **Which lines run at a station?** The data is computed from [open](https://daten.berlin.de/datensaetze/vbb-fahrplandaten-gtfs) [GTFS](https://developers.google.com/transit/gtfs/) [data](https://vbb-gtfs.jannisr.de/).
 
 [![npm version](https://img.shields.io/npm/v/vbb-lines-at.svg)](https://www.npmjs.com/package/vbb-lines-at)
-[![dependency status](https://img.shields.io/david/derhuerst/vbb-lines-at.svg)](https://david-dm.org/derhuerst/vbb-lines-at)
-[![dev dependency status](https://img.shields.io/david/dev/derhuerst/vbb-lines-at.svg)](https://david-dm.org/derhuerst/vbb-lines-at#info=devDependencies)
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/vbb-lines-at.svg)
-[![gitter channel](https://badges.gitter.im/derhuerst/vbb-rest.svg)](https://gitter.im/derhuerst/vbb-rest)
-[![support me on Patreon](https://img.shields.io/badge/support%20me-on%20patreon-fa7664.svg)](https://patreon.com/derhuerst)
+[![support me via GitHub Sponsors](https://img.shields.io/badge/support%20me-donate-fa7664.svg)](https://github.com/sponsors/derhuerst)
+[![chat with me on Twitter](https://img.shields.io/badge/chat%20with%20me-on%20Twitter-1da1f2.svg)](https://twitter.com/derhuerst)
 
 
 ## Installing

@@ -21,16 +21,16 @@
 	"bugs": "https://github.com/derhuerst/vbb-lines/issues-at",
 	"license": "ISC",
 	"engines": {
-		"node": ">=8"
+		"node": ">=16"
 	},
 	"devDependencies": {
 		"lodash.pick": "^4.4.0",
 		"stream-sink": "^2.0.0",
-		"through2": "^3.0.0",
-		"vbb-lines": "^4.1.0",
+		"through2": "^4.0.2",
+		"vbb-lines": "^5.0.0",
 		"vbb-mode-weights": "^0.2.0",
 		"vbb-parse-line": "^1.0.0",
-		"vbb-stations": "^7.3.1",
+		"vbb-stations": "^8.0.0",
 		"vbb-trips": "^3.0.0"
 	},
 	"scripts": {

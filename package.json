@@ -1,7 +1,7 @@
 {
 	"name": "vbb-lines-at",
 	"description": "Which lines run at a VBB station?",
-	"version": "5.0.0",
+	"version": "5.1.0",
 	"main": "index.js",
 	"files": [
 		"index.js",
@@ -32,7 +32,7 @@
 		"vbb-mode-weights": "^0.2.0",
 		"vbb-parse-line": "^1.0.0",
 		"vbb-stations": "^8.0.0",
-		"vbb-trips": "^3.0.0"
+		"vbb-trips": "^4.0.0"
 	},
 	"scripts": {
 		"lint": "eslint .",
